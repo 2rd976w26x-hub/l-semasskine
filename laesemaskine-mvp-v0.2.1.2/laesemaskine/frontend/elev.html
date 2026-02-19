@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Læsemaskine – Elev</title>
+  <link rel="stylesheet" href="/laesemaskine/css/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Læsemaskine</h1>
+          <div class="badge">Elev • v<span class="js-version"></span></div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="ghost" id="btnLogout">Log ud</button>
+      </div>
+    </div>
+
+    <div class="grid two">
+      <div class="card">
+        <h2>Start træning</h2>
+        <p class="muted">En session er 20 ord. Du får ét ord ad gangen.</p>
+
+        <div class="row">
+          <div class="field" style="max-width:240px">
+            <label>Feedback</label>
+            <select id="feedbackMode">
+              <option value="per_word" selected>Efter hvert ord</option>
+              <option value="after_test">Efter testen</option>
+            </select>
+          </div>
+
+          <div class="field" style="max-width:240px">
+            <label>Startniveau (auto)</label>
+            <input id="startLevel" disabled value="1"/>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:12px">
+          <button class="primary" id="btnStart">Start 20-ords træning</button>
+        </div>
+        <div id="toast" class="toast" style="display:none"></div>
+      </div>
+
+      <div class="card">
+        <h2>Min progression</h2>
+        <div class="kpi">
+          <div class="num" id="kpiLevel">–</div>
+          <div class="label">seneste niveau</div>
+        </div>
+        <p class="muted">Mestring pr niveau (1–10).</p>
+        <div id="masteryList" class="small muted">Indlæser…</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <h2>Hjælp</h2>
+      <p class="muted">Hvis mikrofonen ikke virker: tjek browser-tilladelser (mikrofon) og prøv igen.</p>
+      <p class="small muted">Privatliv: <a href="/laesemaskine/PRIVACY.html">PRIVACY</a></p>
+    </div>
+
+    <div class="footer">Læsemaskine v<span class="js-version"></span> • 2026-02-14</div>
+  </div>
+
+  <script src="/laesemaskine/js/common.js"></script>
+  <script src="/laesemaskine/js/elev.js"></script>
+</body>
+</html>

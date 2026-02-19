@@ -1,0 +1,81 @@
+<!doctype html><html lang="da"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Læsemaskine – Privatliv</title>
+<link rel="stylesheet" href="/laesemaskine/css/styles.css"/>
+</head><body>
+<div class="container">
+  <div class="topbar">
+    <div class="brand"><div class="logo"></div><div>
+      <h1>Privatliv</h1><div class="badge">v<span class="js-version"></span></div>
+    </div></div>
+    <div class="row"><a class="badge" href="/laesemaskine/">Til login</a></div>
+  </div>
+  <div class="card">
+    <h2>Privatliv (kladde)</h2>
+    <p class="muted">Dette er en kladde og skal tilpasses jeres drift.</p>
+    <pre style="white-space:pre-wrap; font-family:inherit; color:var(--text)"># Privatliv (kladde) – Læsemaskine
+
+**Version:** 0.2.1.2.2  
+**Dato:** 2026-02-14
+
+Dette er en kladde til privatlivstekst. Den skal tilpasses jeres konkrete drift (skole/privat) og evt. juridisk gennemgang.
+
+## Hvad er Læsemaskine?
+Læsemaskine er et træningsværktøj, hvor eleven øver sig på at læse ord. En træning består af 20 ord.
+
+## Hvilke data gemmer vi?
+Vi forsøger at gemme så lidt som muligt (data-minimering).
+
+**Typisk gemmer vi:**
+- Brugernavn (kan være et kaldenavn)
+- Rolle (elev eller gruppe-admin)
+- Gruppemedlemskab (hvis relevant)
+- Træningsresultater (fx rigtige/forkerte, estimeret niveau og mestring)
+- Tid pr. ord (kan bruges til progression)
+
+**Vi gemmer ikke som standard:**
+- CPR, adresse, fødselsdato
+- Rå lydoptagelser fra mikrofonen
+
+## Mikrofon og talegenkendelse
+Når eleven trykker “Tryk og læs”, bruges browserens mikrofon til at genkende tale, så vi kan vurdere om ordet blev læst korrekt.
+
+- Vi gemmer ikke selve lydfilen.
+- Vi gemmer kun resultatet (fx korrekt/ikke korrekt) og evt. den genkendte tekst.
+
+## Hvem kan se data?
+- Eleven kan se egne resultater og progression.
+- Gruppe-admin kan se data for elever i sin gruppe (progression og overblik).
+
+## Hvor længe gemmes data?
+MVP: Data gemmes, indtil I sletter kontoen eller indfører en slettepolitik.
+Anbefaling: Indfør automatisk sletning/arkivering efter en aftalt periode (fx skoleår + 6 mdr).
+
+## Børn og oprettelse af konto
+For børn anbefales det, at en voksen (lærer/forælder/gruppe-admin) opretter elevkonti.
+
+## Dine rettigheder
+Du kan typisk:
+- få indsigt i data
+- få rettet data
+- få slettet data (hvis I ønsker det i jeres opsætning)
+
+## Kontakt
+Skriv her: hvem der er dataansvarlig, kontaktmail og evt. DPO.
+
+
+
+## Fejlmelding og (valgfri) lyd
+Hvis eleven fejlmelder et ord (“Jeg mener jeg sagde det rigtigt”), kan eleven vælge at sende en kort lydoptagelse (ca. 4 sek.) til læreren som dokumentation.
+
+- Lyd optages kun, hvis eleven aktivt trykker “Optag”.
+- Lyd bruges til kvalitetssikring/review af læreren.
+- Lyd bør have en kort opbevaringstid (fx 30–90 dage) og kunne slettes.
+
+Hvis I ønsker at bruge lyd til modeltræning, kræver det et særskilt og tydeligt formål, og typisk et eksplicit opt-in/samtykke.
+</pre>
+  </div>
+  <div class="footer">Læsemaskine v<span class="js-version"></span> • 2026-02-14</div>
+</div>
+<script src="/laesemaskine/js/common.js"></script>
+</body></html>

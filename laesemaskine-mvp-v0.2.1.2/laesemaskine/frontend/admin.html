@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Læsemaskine – Admin</title>
+  <link rel="stylesheet" href="/laesemaskine/css/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Læsemaskine</h1>
+          <div class="badge">Admin • v<span class="js-version"></span></div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="ghost" id="btnToElev">Elev-visning</button>
+        <button class="ghost" id="btnLogout">Log ud</button>
+      </div>
+    </div>
+
+    <div class="grid two">
+      <div class="card">
+        <h2>Grupper</h2>
+        <div class="row">
+          <div class="field">
+            <label>Ny gruppe</label>
+            <input id="groupName" placeholder="fx 3.A 2025/26"/>
+          </div>
+          <button class="primary" id="btnCreateGroup">Opret</button>
+        </div>
+        <div id="groups" class="small muted" style="margin-top:12px">Indlæser…</div>
+        <div id="toastGroup" class="toast" style="display:none"></div>
+      </div>
+
+      <div class="card">
+        <h2>Opret elev</h2>
+        <p class="muted small">Anbefalet ift børn og GDPR: Admin opretter elevkonti.</p>
+        <div class="field">
+          <label>Brugernavn</label>
+          <input id="stuUser"/>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input id="stuPass" type="password"/>
+        </div>
+        <div class="field">
+          <label>Visningsnavn (valgfrit)</label>
+          <input id="stuName" placeholder="fx Mia"/>
+        </div>
+        <div class="field">
+          <label>Gruppe</label>
+          <select id="stuGroup"></select>
+        </div>
+        <button class="primary" id="btnCreateUser" style="margin-top:12px">Opret elev</button>
+        <div id="toastUser" class="toast" style="display:none"></div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <h2>Oversigt</h2>
+      <div id="overview" class="muted small">Indlæser…</div>
+    
+    <div class="card" style="margin-top:16px">
+      <h2>Elev – detaljer</h2>
+      <p class="muted small">Klik på en elev i oversigten for at se svære kategorier og ord-resultater.</p>
+      <div id="studentDetail" class="muted small">Vælg en elev…</div>
+      <div id="drilldownPanel" class="card" style="margin-top:12px; display:none">
+        <div class="row" style="justify-content:space-between; align-items:center">
+          <b id="drilldownTitle">Detaljer</b>
+          <button class="ghost small" id="btnCloseDrilldown">Luk</button>
+        </div>
+        <div id="drilldownBody" class="muted small" style="margin-top:10px">—</div>
+      </div>
+    </div>
+
+</div>
+
+    <div class="card" style="margin-top:16px">
+      <h2>Fejlmeldinger</h2>
+      <p class="muted small">Elever kan fejlmelde ord hvis de mener de sagde det rigtigt. Her kan du godkende/afvise.</p>
+      <div id="disputes" class="muted small">Indlæser…</div>
+    </div>
+
+    <div class="footer">Læsemaskine v<span class="js-version"></span> • 2026-02-14</div>
+  </div>
+
+  <script src="/laesemaskine/js/common.js"></script>
+  <script src="/laesemaskine/js/admin.js"></script>
+</body>
+</html>

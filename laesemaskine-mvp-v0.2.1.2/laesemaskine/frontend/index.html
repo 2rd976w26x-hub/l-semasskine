@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Læsemaskine – Login</title>
+  <link rel="stylesheet" href="/laesemaskine/css/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Læsemaskine</h1>
+          <div class="badge">v<span class="js-version"></span> • MVP</div>
+        </div>
+      </div>
+      <div class="badge">Ingen link fra Piratwhist endnu</div>
+    </div>
+
+    <div class="grid two">
+      <div class="card">
+        <h2>Log ind</h2>
+        <p class="muted">Brugernavn og adgangskode.</p>
+        <div class="field">
+          <label>Brugernavn</label>
+          <input id="loginUser" autocomplete="username"/>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input id="loginPass" type="password" autocomplete="current-password"/>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <button class="primary" id="btnLogin">Log ind</button>
+        </div>
+        <div id="loginToast" class="toast" style="display:none"></div>
+      </div>
+
+      <div class="card">
+        <h2>Opret bruger</h2>
+        <p class="muted">Elever kan oprettes her, men i praksis anbefales det at en voksen/admin opretter elevkonti.</p>
+        <div class="field">
+          <label>Brugernavn</label>
+          <input id="regUser" autocomplete="username"/>
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input id="regPass" type="password" autocomplete="new-password"/>
+        </div>
+        <div class="field">
+          <label>Rolle</label>
+          <select id="regRole">
+            <option value="elev" selected>Elev</option>
+            <option value="admin">Gruppe-admin</option>
+          </select>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <button class="primary" id="btnRegister">Opret og log ind</button>
+        </div>
+        <div id="regToast" class="toast" style="display:none"></div>
+        <p class="small muted" style="margin-top:12px">
+          Privatliv: Se <a href="/laesemaskine/PRIVACY.html">PRIVACY</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">Læsemaskine v<span class="js-version"></span> • 2026-02-14</div>
+  </div>
+
+  <script src="/laesemaskine/js/common.js"></script>
+  <script src="/laesemaskine/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Læsemaskine – Resultat</title>
+  <link rel="stylesheet" href="/laesemaskine/css/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Læsemaskine</h1>
+          <div class="badge">Resultat • v<span class="js-version"></span></div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="ghost" id="btnBack">Tilbage</button>
+      </div>
+    </div>
+
+    <div class="grid two">
+      <div class="card">
+        <h2>Godt gået! 🎉</h2>
+        <div class="kpi">
+          <div class="num" id="kpiCorrect">–</div>
+          <div class="label">rigtige</div>
+        </div>
+        <p class="muted">Din session var 20 ord.</p>
+        <div id="stars" style="font-size:22px; margin-top:10px"></div>
+      </div>
+
+      <div class="card">
+        <h2>Estimeret niveau</h2>
+        <div class="kpi">
+          <div class="num" id="kpiLevel">–</div>
+          <div class="label">niveau</div>
+        </div>
+        <p class="muted">Mestring (1–10) opdateres automatisk.</p>
+        <div id="toast" class="toast" style="display:none"></div>
+      </div>
+    
+    <div class="card" style="margin-top:16px">
+      <h2>Resultat pr. ord</h2>
+      <p class="muted">Her kan du se, hvilke ord der var rigtige eller forkerte. Hvis du mener, du sagde ordet rigtigt, kan du fejlmelde linjen.</p>
+      <div id="wordResults" class="muted small">Indlæser…</div>
+    </div>
+
+</div>
+
+    <div class="card" style="margin-top:16px">
+      <h2>Næste gang</h2>
+      <p class="muted">Du kan træne igen med det samme – eller kig på din progression på elev-siden.</p>
+      <div class="row">
+        <button class="primary" id="btnAgain">Træn igen</button>
+        <button class="ghost" id="btnDash">Min side</button>
+      </div>
+    </div>
+
+    <div class="footer">Læsemaskine v<span class="js-version"></span> • 2026-02-14</div>
+  </div>
+
+  <script src="/laesemaskine/js/common.js"></script>
+  <script src="/laesemaskine/js/resultat.js"></script>
+
+  <!-- Fejlmeld modal -->
+  <div id="disputeModal" class="modalOverlay" style="display:none">
+    <div class="modalCard">
+      <div class="row" style="justify-content:space-between; align-items:center">
+        <b id="dmTitle">Fejlmeld ord</b>
+        <button class="ghost small" id="dmClose">✕</button>
+      </div>
+      <div class="muted small" id="dmMeta" style="margin-top:6px"></div>
+
+      <div style="margin-top:10px">
+        <audio id="dmAudio" controls style="width:100%"></audio>
+        <div class="muted small" id="dmAudioStatus" style="margin-top:6px"></div>
+      </div>
+
+      <textarea id="dmNote" rows="3" style="width:100%; margin-top:10px" placeholder="Skriv kort hvorfor (valgfrit)…"></textarea>
+
+      <div class="row" style="justify-content:flex-end; gap:8px; margin-top:10px">
+        <button class="ghost small" id="dmCancel">Annuller</button>
+        <button class="primary small" id="dmSend">Send fejlmelding</button>
+      </div>
+      <div class="muted small" id="dmStatus" style="margin-top:8px"></div>
+    </div>
+  </div>
+
+</body>
+</html>

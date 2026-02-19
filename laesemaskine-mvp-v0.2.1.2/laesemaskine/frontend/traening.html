@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Læsemaskine – Træning</title>
+  <link rel="stylesheet" href="/laesemaskine/css/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Læsemaskine</h1>
+          <div class="badge">Træning • v<span class="js-version"></span></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="badge" id="counter">0/20</div>
+        <button class="ghost" id="btnExit">Forlad</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="progress"><div id="barOverall"></div></div>
+      <div class="progress wordTimer" title="Timing for dette ord: 2 sek klar, ordet vises, 2 sek pause">
+        <div id="wordBar"></div>
+      </div>
+      <div class="muted small" id="phaseLabel">Klar…</div>
+      <div class="wordBox">
+        <div class="word" id="word">—</div>
+        <div class="row">
+          <button class="ghost" id="btnDetails">🧠 Detaljeret feedback: OFF</button>
+          <button class="ghost" id="btnSkip">Spring</button>
+        </div>
+        <div class="muted small" id="micStatus"></div>
+        <div class="muted small" id="hint">Tip: Tillad mikrofon i browseren.</div>
+        <div id="toast" class="toast" style="display:none"></div>
+      </div>
+    </div>
+
+    <div class="footer">Læsemaskine v<span class="js-version"></span> • 2026-02-14</div>
+  </div>
+
+  <script src="/laesemaskine/js/common.js"></script>
+  <script src="/laesemaskine/js/ai.js"></script>
+  <script src="/laesemaskine/js/adaptive.js"></script>
+  <script src="/laesemaskine/js/traening.js"></script>
+</body>
+</html>
